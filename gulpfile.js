@@ -16,5 +16,5 @@ gulp.task('push', function() {
 });
 
 gulp.task('watch', ['push'], function() {
-    gulp.watch(path.join(dirs.buildDir, '**/*'), ['push']).pipe(plumber());
+    gulp.watch(path.join(dirs.buildDir, '**/*'), ['push']);
 });
