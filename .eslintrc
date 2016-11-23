@@ -1,0 +1,50 @@
+{
+  "extends": "airbnb",  
+  "globals": {
+    "jQuery": true,
+    "$": true,
+    "angular": true,
+    "moment": true
+  },
+  "env": {
+    // I write for browser
+    "browser": true,
+    // in CommonJS
+    //"node": true
+    // in jQuery
+    "jquery": true
+  },
+  "rules": {
+    //http://eslint.org/docs/rules/
+    "linebreak-style": ["error", "windows"],
+    "func-names": 0,
+    "indent" : [1, 4],
+    "space-before-function-paren": 0,
+
+    "no-console": 0, //console 未删除
+    "no-var": 0,
+    "no-new": 0,
+    "import/no-unresolved": 0,
+    "no-underscore-dangle": [0],
+    "prefer-template": 0,
+    "object-shorthand": [0],
+    "prefer-arrow-callback": 0,
+    "prefer-rest-params": 0,
+    "no-param-reassign": 0,
+    "max-len": ["error", {
+      "code": 200,
+      "tabWidth": 2,
+      "comments": 200,
+      "ignoreComments": false,
+      "ignoreTrailingComments": false,
+      "ignoreUrls": true
+    }],
+    "global-require": 0,
+    "no-alert": 0,
+    'no-restricted-syntax': [
+      2,
+      'LabeledStatement',
+      'WithStatement',
+    ]
+  }
+}
