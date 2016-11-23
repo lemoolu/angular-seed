@@ -20,6 +20,7 @@
     "func-names": 0,
     "indent" : [1, 4],
     "space-before-function-paren": 0,
+    "no-unused-vars": 1,
 
     "no-console": 0, //console 未删除
     "no-var": 0,
