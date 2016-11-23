@@ -1,4 +1,4 @@
-//gulp用于webpack打包完成后，拷贝到服务器文件夹
+// gulp用于webpack打包完成后，拷贝到服务器文件夹
 
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');

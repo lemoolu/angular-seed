@@ -1,5 +1,6 @@
 {
   "extends": "airbnb",  
+  //"parser": "babel-eslint",
   "globals": {
     "jQuery": true,
     "$": true,
@@ -16,7 +17,7 @@
   },
   "rules": {
     //http://eslint.org/docs/rules/
-    "linebreak-style": ["error", "windows"],
+    //"linebreak-style": ["error", "windows"],
     "func-names": 0,
     "indent" : [1, 4],
     "space-before-function-paren": 0,

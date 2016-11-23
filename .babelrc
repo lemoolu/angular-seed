@@ -8,6 +8,7 @@
         "angular.js",
         "angular.min.js",
         "bootstrap.js",
-        "bootstrap.min.js"
+        "bootstrap.min.js",
+        "moment.js",
     ]
 }

@@ -37,6 +37,7 @@ $ npm run start
 | npm run profile | 显示编译过程中每一项资源的耗时，用来调优的 |
 | npm run dll     | 生成Dll文件，每次升级第三方库时都需要重新执行一遍 |
 | npm run clean   | 清除tmp及build文件夹 |
+| gulp watch      | 用于拷贝build文件夹(请新建一个控制台用于运行该命令) |
 
 
 ## 目录结构说明
@@ -45,15 +46,16 @@ $ npm run start
 ├─build # 编译后生成的所有代码、资源
 ├─node_modules # 利用npm管理的所有包及其依赖
 ├─npm-scripts # 一些npm脚本
-├─src # 业务代码
 ├─static # 静态文件夹（将直接拷贝到build文件夹）
 ├─vendor # 所有不能用npm管理的第三方库（将直接拷贝到build文件夹）
 ├─.babelrc # babel的配置文件
 ├─.eslintrc # ESLint的配置文件
 ├─.jslintrc # ESLint的配置文件, jslint规则
+├─gulpfile.js # gulp的配置文件, 用于将build文件夹拷贝到服务器对应的文件夹
 ├─package.json # npm的配置文件
 ├─webpack-config # webpack的配置文件目录
 ├─webpack.config.js # webpack的发布配置文件
+├─webpack.dll.config.js # webpack的dll配置文件
 ├─webpack.dev.config.js # webpack的开发配置文件
 └─src # 当前项目的源码
 	├─index.html # 入口html
@@ -90,3 +92,27 @@ $ npm run start
 ## 更新日志
 
 ### 1.0.0 (2016-11-23)
+
+
+## sublime的一些配置
+- setting user配置
+```
+//空格替换tab符
+"translate_tabs_to_spaces": true
+
+//'windows' (CRLF) and 'unix' (LF only)
+"default_line_ending": "unix"
+
+//sublime eslint配置 需要.eslintrc文件
+npm install eslint -g
+package install SublimeLinter-contrib-eslint和 SublimeLinter 插件
+
+//一些插件
+All Autocomplete
+Emmet
+Sass
+HTML-CSS-JS Prettify
+SideBarEnhancements
+Theme - Afterglow
+Theme - SpaceGray
+```

@@ -1,7 +1,8 @@
-//dll打包
-const webpack = require('webpack');
-const vendors = [
-    'jquery', 'angular'
+// dll打包
+var webpack = require('webpack');
+
+var vendors = [
+    'jquery', 'angular',
 ];
 
 module.exports = {
@@ -11,7 +12,7 @@ module.exports = {
         library: '[name][hash:6]',
     },
     entry: {
-        "dll": vendors,
+        dll: vendors,
     },
     plugins: [
         new webpack.DllPlugin({
@@ -21,8 +22,8 @@ module.exports = {
         }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false
-            }
-        })
+                warnings: false,
+            },
+        }),
     ],
 };

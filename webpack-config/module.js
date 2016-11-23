@@ -1,4 +1,4 @@
-var path = require('path');
+// loaders
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var dirs = require('./base.js');
@@ -8,9 +8,9 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         include: dirs.srcRootDir,
-        loader: 'eslint-loader'
+        loader: 'eslint-loader',
     }],
-    //加载器配置
+    // 加载器配置
     loaders: [{
             test: /\.css$/,
             exclude: /(node_modules|bower_components|bootstrap)/,
@@ -19,7 +19,7 @@ module.exports = {
             test: /\.js$/,
             exclude: /(node_modules|bower_components)/,
             loader: 'babel-loader',
-            query: { presets: ['es2015'] }
+            query: { presets: ['es2015'] },
         }, {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract('css?minimize&-autoprefixer!postcss!sass'),
@@ -41,5 +41,5 @@ module.exports = {
         },
         // 此loader配置项的目标是NPM中的jquery  先把jQuery对象声明成为全局变量`jQuery`，再通过管道进一步又声明成为全局变量`$`
         // { test: require.resolve('jquery'), loader: 'expose?$!expose?jQuery' }
-    ]
+    ],
 };
