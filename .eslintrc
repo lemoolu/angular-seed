@@ -8,22 +8,19 @@
     "moment": true
   },
   "env": {
-    // I write for browser
     "browser": true,
-    // in CommonJS
-    //"node": true
-    // in jQuery
+    "node": true,
     "jquery": true
   },
   "rules": {
     //http://eslint.org/docs/rules/
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": 0,
     "func-names": 0,
     "indent" : [1, 4],
     "space-before-function-paren": 0,
     "no-unused-vars": 1,
 
-    "no-console": 0, //console 未删除
+    "no-console": 0,
     "no-var": 0,
     "no-new": 0,
     "import/no-unresolved": 0,

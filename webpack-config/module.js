@@ -1,6 +1,5 @@
 // loaders
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 var dirs = require('./base.js');
 
 module.exports = {
