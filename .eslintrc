@@ -16,9 +16,11 @@
     //http://eslint.org/docs/rules/
     "linebreak-style": 0,
     "func-names": 0,
-    "indent" : [1, 4],
+    "indent" : 0,
     "space-before-function-paren": 0,
     "no-unused-vars": 1,
+    "comma-dangle": 0, //数组最后一项必须有逗号
+    "import/no-extraneous-dependencies": 0,
 
     "no-console": 0,
     "no-var": 0,

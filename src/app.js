@@ -1,8 +1,19 @@
-import angular from 'angular';
-import moment from 'moment';
+import app from 'app.config';
 
-require('./app.config.js');
+// 样式引入
+require('./scss/bootstrap.scss');
+require('./scss/app.scss');
 
-angular.module('app', []).run(function() {
-    console.log('qqwssasassdsd');
-});
+// 模块引入
+require('./modules/home/home');
+
+app.run(function($rootScope, $state, $stateParams) {
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+    })
+    .config(function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/home');
+    })
+    .controller('appCtrl', function($scope) {
+        console.log('start');
+    });
