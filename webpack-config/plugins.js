@@ -43,5 +43,5 @@ module.exports = [
         { context: path.resolve(dirs.rootDir, 'static'), from: '**/*', to: path.resolve(dirs.rootDir, 'build/static') },
         { context: path.resolve(dirs.rootDir, '.tmp/dll'), from: '**/*', to: path.resolve(dirs.rootDir, 'build/dll') },
     ]),
-    // dllReferencePlugin
+    dllReferencePlugin
 ];
