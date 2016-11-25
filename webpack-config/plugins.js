@@ -28,10 +28,10 @@ module.exports = [
     // new CleanPlugin([dirs.buildDir], {
     //     root: dirs.rootDir,
     // }),
-    new ExtractTextPlugin('css/[name]-[hash:6].css'),
+    new ExtractTextPlugin('[name]-[hash:6].css'),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'commons',
-        filename: 'js/[name]-[hash:6].js',
+        filename: '[name]-[hash:6].js',
     }),
     // Also generate a test.html
     new HtmlWebpackPlugin({

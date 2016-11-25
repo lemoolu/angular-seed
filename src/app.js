@@ -2,6 +2,7 @@ import app from 'app.config';
 
 // 样式引入
 require('./scss/bootstrap.scss');
+require('font-awesome/scss/font-awesome.scss');
 require('./scss/app.scss');
 
 // 模块引入
