@@ -1,7 +1,7 @@
 # spa-seed
 
 ## 项目介绍
-本项目是一个利用webpack架构的**single page web application**脚手架
+本项目是一个利用webpack架构的**angular**脚手架，也适用其他单页面网站
 
 ## 使用说明
 - 全局安装webpack和webpack-dev-server，如果已经装过那可以跳过这一步
@@ -35,7 +35,7 @@ $ npm run start
 | npm run watch   | 在`npm run dev`的基础上添加`-- watch`，实时监控源文件，建议开发时使用这项 |
 | npm run start   | 开启webpack-dev-server，然后就可以在 http://localhost:8080/ 查看成品了 |
 | npm run profile | 显示编译过程中每一项资源的耗时，用来调优的 |
-| npm run dll     | 生成Dll文件，每次升级第三方库时都需要重新执行一遍 |
+| npm run dll     | 生成Dll文件，每次升级第三方库时都需要重新执行一遍（暂时不使用，会生成一个全局变量替代window.jquery，导致一些插件问题） |
 | npm run clean   | 清除tmp及build文件夹 |
 | gulp watch      | 用于拷贝build文件夹(请新建一个控制台用于运行该命令) |
 
@@ -52,6 +52,7 @@ $ npm run start
 ├─.eslintrc # ESLint的配置文件
 ├─.jslintrc # ESLint的配置文件, jslint规则
 ├─gulpfile.js # gulp的配置文件, 用于将build文件夹拷贝到服务器对应的文件夹
+├─manifest.json # dll配置自动生成的文件
 ├─package.json # npm的配置文件
 ├─webpack-config # webpack的配置文件目录
 ├─webpack.config.js # webpack的发布配置文件
@@ -59,18 +60,17 @@ $ npm run start
 ├─webpack.dev.config.js # webpack的开发配置文件
 └─src # 当前项目的源码
 	├─index.html # 入口html
-	├─app.js # 入口js
+    ├─app.js # 入口js
+	├─app.config.js # angular实例及配置
     ├─resource # 代码中需要引用的资源文件夹
+    ├─scss # 样式代码
     ├─modules # 各个页面独有的部分，如入口文件、只有该页面使用到的css、模板文件等
     │  	├─index # 业务模块
     │  	│  ├─index.html
-    │  	│  ├─index.service.js
     │  	│  └─index.js
     │  	└─user # 业务模块
     │      ├─user.html
-    │      ├─user.service.js
     │      └─user.js 
-    ├─scss # 样式代码
     └─components # 各个页面使用到的公共组件
 	    ├─app.ctrl.js # controller配置
 	    ├─app.service.js # service配置

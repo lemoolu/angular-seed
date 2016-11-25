@@ -2,7 +2,6 @@
 var webpack = require('webpack');
 var CleanPlugin = require('clean-webpack-plugin');
 var dirs = require('./webpack-config/base.js');
-var path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // 需要打包到dll的库

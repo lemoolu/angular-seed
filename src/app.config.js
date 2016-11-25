@@ -7,7 +7,7 @@ export default angular.module('app', [
 
 /*
 
-let 
+let
 只在let命令所在的代码块内有效，且必须先声明，不允许重复声明
 exp: for (let i = 0; i < 10; i++) {}
 
@@ -24,7 +24,7 @@ fuction def({
     name : 'default',
     age: 20
 }){
-    
+
 }
 function move({x, y} = { x: 0, y: 0 }) {
   return [x, y];
@@ -43,4 +43,4 @@ var { foo, bar } = example();
 '\u007A' === 'z' // true
 '\u{7A}' === 'z' // true
 
- */
+*/
