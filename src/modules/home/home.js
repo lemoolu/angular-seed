@@ -1,29 +1,16 @@
 import app from 'app.config';
 
-require('./home-a.js');
-
-app.config(function($stateProvider, $urlRouterProvider) {
+// 首页
+app.config(($stateProvider) => {
         $stateProvider
             .state('home', {
                 url: '/home',
                 template: require('./home.html')
-            })
-            .state('home.a', {
-                url: '/a',
-                views: {
-                    '@': { template: require('./home-a.html') }
-                }
-            })
-            .state('home.b', {
-                url: '/b',
-                views: {
-                    '@': { template: require('./home-b.html') }
-                }
             });
     })
-    .service('homeService', function() {
+    .service('homeService', () => {
         this.name = 'homeService';
     })
-    .controller('homeCtrl', function($scope) {
+    .controller('homeCtrl', ($scope) => {
         $scope.name = 'home';
     });

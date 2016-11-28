@@ -1,6 +1,7 @@
-'use strict';
+import app from 'app.config';
 
-angular.module('app').service('appService', function($rootScope, $state, $stateParams, request, $cookies) {
+app.service('appService', () => {
+    // 时间选择插件配置
     this.dataRangePickerOpt = {
         opens: 'right',
         maxDate: new Date(),
@@ -15,7 +16,7 @@ angular.module('app').service('appService', function($rootScope, $state, $stateP
             '上个月': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         },
         locale: {
-            format: "YYYY-MM-DD HH:mm",
+            format: 'YYYY-MM-DD HH:mm',
             applyLabel: '确定',
             cancelLabel: '取消',
             customRangeLabel: '自定义',
