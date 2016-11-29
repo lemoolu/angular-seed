@@ -21,6 +21,7 @@
     "no-unused-vars": 1,
     "comma-dangle": 0, //数组最后一项必须有逗号
     "import/no-extraneous-dependencies": 0,
+    "prefer-const": 0,
 
     "no-console": 0,
     "no-var": 0,

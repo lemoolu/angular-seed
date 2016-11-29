@@ -19,11 +19,12 @@ require('./modules/settlement/settlement.js'); // 结算管理
 app.run(($rootScope, $state, $stateParams) => {
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
+        let name = 'start success';
+        console.info(`${name}`);
     })
     .config(($stateProvider, $urlRouterProvider) => {
         $urlRouterProvider.otherwise('/home');
     })
     .controller('appCtrl', ($scope) => {
-        $scope.name = 'start success';
-        console.info($scope.name);
+
     });
